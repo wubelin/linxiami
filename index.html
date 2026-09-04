@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>霖蝦米輸入法</title>
+    <meta name="description" content="霖蝦米輸入法是一款 Android 嘸蝦米中文輸入法 App，支援英文智慧輸入、自訂詞庫與跨裝置雲端同步。">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --bg-color: #f3f4f6;
+            --card-bg: #ffffff;
+            --text-main: #1f2937;
+            --text-secondary: #6b7280;
+            --border-color: #e5e7eb;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: "Segoe UI", "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0 20px 60px;
+        }
+        .container { max-width: 720px; margin: 0 auto; }
+        header {
+            text-align: center;
+            padding: 56px 0 32px;
+        }
+        header img {
+            width: 88px;
+            height: 88px;
+            border-radius: 20px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+        }
+        h1 {
+            font-size: 2rem;
+            margin: 20px 0 8px;
+        }
+        .tagline {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+        }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 24px 28px;
+            margin-bottom: 20px;
+        }
+        .card h2 {
+            font-size: 1.15rem;
+            margin-top: 0;
+            margin-bottom: 14px;
+        }
+        ul {
+            margin: 0;
+            padding-left: 1.2em;
+        }
+        li { margin-bottom: 8px; }
+        .badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 999px;
+            margin-bottom: 20px;
+        }
+        footer {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: 40px;
+        }
+        a { color: var(--primary-color); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="data:image/webp;base64,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" alt="霖蝦米輸入法圖示">
+            <h1>霖蝦米輸入法</h1>
+            <p class="tagline">Android 上的嘸蝦米中文輸入法，支援英文智慧輸入與跨裝置雲端同步</p>
+        </header>
+
+        <div class="card">
+            <span class="badge">目前為封閉測試階段</span>
+            <h2>這是什麼</h2>
+            <p>
+                霖蝦米輸入法（package name：<code>com.wubelin.linxiami</code>）是一款免費的 Android
+                輸入法（IME）App，主要提供嘸蝦米中文輸入，同時支援英文輸入與常用符號、表情符號。
+                目前處於封閉測試階段，尚未正式對外上架，測試邀請成員可透過 Google Play
+                的封閉測試連結安裝使用。
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>功能特色</h2>
+            <ul>
+                <li>嘸蝦米中文輸入，支援同音字查詢與拆碼提示</li>
+                <li>英文輸入提供「一般」與「智慧」兩種模式，智慧模式具備空間容錯與自動校正</li>
+                <li>使用者可自訂詞庫、匯入/匯出個人化學習資料</li>
+                <li>條碼掃描、語音輸入等輔助輸入功能</li>
+                <li>多種主題配色與鍵盤外觀設定</li>
+                <li>可選擇使用 Google 帳號將個人詞庫、學習資料與系統字根表同步到雲端，方便更換裝置時延續設定</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>資料與隱私</h2>
+            <p>
+                霖蝦米輸入法的個人詞庫與學習資料預設只存在使用者裝置本機。若使用者主動選擇登入 Google
+                帳號並啟用雲端同步功能，App 只會將使用者詞庫、聯想詞學習資料與系統字根表這三項內容，
+                寫入使用者自己 Google 帳號底下、僅供本 App 存取的私有空間（Google Drive
+                應用程式資料夾），不會存取使用者 Google 帳號中的其他檔案，也不會把資料傳送到本 App
+                以外的任何伺服器。不登入、不啟用雲端同步，完全不影響其他任何功能。
+            </p>
+        </div>
+
+        <footer>
+            © 霖蝦米輸入法
+        </footer>
+    </div>
+</body>
+</html>
